@@ -19,6 +19,19 @@ const routes = [
     path: '/ContactCard',
     component: () => import('../components/ContactCard.vue')
   },
+  {
+    path: '/NuevaEntrada',
+    component: () => import('../components/BlogForm.vue')
+  },
+  {
+    path: '/entradas',
+    component: () => import('../components/ListaEntradas.vue')
+  },
+  {
+    path: '/entrada/:id',
+    name: 'entrada-detalle',
+    component: () => import('../components/EntradaDetalle.vue')
+  }
 ]
 
 const router = createRouter({
