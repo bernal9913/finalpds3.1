@@ -19,6 +19,9 @@ npm run build
 ```
 npm run lint
 ```
-
+### Lints and fixes files
+```
+sudo vue ui
+```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
