@@ -3,7 +3,7 @@
         <h2>Lista de entradas</h2>
         <ul>
             <li v-for="entrada in entradas" :key="entrada.id">
-            <router-link :to="'/entrada' + entrada.id">{{ entrada.titulo }}</router-link>
+            <router-link :to="'/entrada/' + entrada.id">{{ entrada.titulo }}</router-link>
         </li>
         </ul>
     </div>
@@ -17,6 +17,7 @@ export default{
     },
     mounted(){
         const entradasGuardadas = JSON.parse(localStorage.getItem('entradas')) || [];
+        console.log(entradasGuardadas)
         this.entradas = entradasGuardadas; 
     }
 };
