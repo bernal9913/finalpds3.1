@@ -3,8 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/ContactCard">Contact Card Test</router-link> |
-    <router-link to="/NuevaEntrada">Nueva entrada TEST</router-link> |
-    <router-link to="/entradas">Entradas</router-link>
+    <router-link to="/NuevaEntrada">Nueva publicación</router-link> |
+    <router-link to="/entradas">Publicaciónes</router-link>
   </nav>
   <router-view/>
 </template>
