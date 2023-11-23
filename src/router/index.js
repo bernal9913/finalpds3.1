@@ -20,6 +20,10 @@ const routes = [
     component: () => import('../components/ContactCard.vue')
   },
   {
+    path: '/HomePublicaciones',
+    component: () => import('../components/HomePublicaciones.vue')
+  },
+  {
     path: '/NuevaEntrada',
     component: () => import('../components/BlogForm.vue')
   },
@@ -32,6 +36,7 @@ const routes = [
     name: 'entrada-detalle',
     component: () => import('../components/EntradaDetalle.vue')
   }
+
 ]
 
 const router = createRouter({
