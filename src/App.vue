@@ -1,5 +1,7 @@
 <template>
   <nav>
+    <SearchList/>
+    <search-list/>
     <router-link to="/">Home</router-link> |
     <router-link to="/HomePublicaciones">Noticias</router-link> |
     <router-link to="/about">About</router-link> |
@@ -8,6 +10,9 @@
     <router-link to="/entradas">Publicaciónes</router-link>
   </nav>
   <router-view/>
+  <div>
+    <SearchList />
+  </div>
 </template>
 
 <style>
@@ -32,3 +37,11 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+<script>
+import searchList from "@/views/SearchList.vue";
+export default {
+  components:{
+    searchList,
+  }
+}
+</script>
