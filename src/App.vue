@@ -7,7 +7,8 @@
     <router-link to="/about">About</router-link> |
     <router-link to="/ContactCard">Contact Card Test</router-link> |
     <router-link to="/NuevaEntrada">Nueva publicación</router-link> |
-    <router-link to="/entradas">Publicaciónes</router-link>
+    <router-link to="/entradas">Publicaciónes</router-link> |
+    <router-link to="/Chat">Chat</router-link>
   </nav>
   <router-view/>
   <div>

@@ -24,6 +24,10 @@ const routes = [
     component: () => import('../components/HomePublicaciones.vue')
   },
   {
+    path: '/Chat',
+    component: () => import('../components/ChatFake.vue')
+  },
+  {
     path: '/NuevaEntrada',
     component: () => import('../components/BlogForm.vue')
   },
