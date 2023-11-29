@@ -1,5 +1,5 @@
 <template>
-  <div class="news-grid">
+  <div class="news-list">
     <div v-for="news in newsList" :key="news.id" class="news-card">
       <h2>{{ news.title }}</h2>
       <img :src="news.image" alt="News Image" class="news-image">
@@ -85,14 +85,23 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
 }
+.news-list {
+  display: flex;
+  flex-direction: column;
+}
 
 .news-card {
-    /* border: 1px solid #ccc; */
+  margin-bottom: 20px;
+  /* Resto de los estilos... */
+}
+/*
+.news-card {
+    /* border: 1px solid #ccc;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 10px 11px 12px 5px #e6e6e6b8;
     background: #f7f7f7;
-}
+}*/
 
 .comment-bar {
   margin-top: 10px;
