@@ -9,9 +9,9 @@
     <router-link to="/NuevaEntrada">Nueva publicación</router-link> |
     <router-link to="/entradas">Publicaciónes</router-link> |
     <router-link to="/Chat">Chat</router-link> |
-    <router-link to="/amigos">Amigos</router-link>
-    <router-link to="/followers">Seguidores</router-link>
-    <router-link to="/ajustes">Ajustes</router-link>
+    <router-link to="/amigos">Amigos</router-link> |
+    <router-link to="/followers">Seguidores</router-link> |
+    <router-link to="/login">Iniciar sesion</router-link> |
   </nav>
   <router-view/>
   <div>

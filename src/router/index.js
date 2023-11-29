@@ -53,6 +53,21 @@ const routes = [
   {
     path: "/ajustes",
     component: () => import("../components/PrivacySettings.vue")
+  },
+  {
+    path: "/login",
+    name: "Iniciar sesion",
+    component: ()=> import("../components/LoginUser.vue")
+  },
+  {
+    path: "/signup",
+    name: "Registrarse",
+    component: () => import("../components/UserRegister.vue")
+  },
+  {
+    path: "/olvidar-contraseña",
+    name: "Olvidaste la contraseña?",
+    component: ()=> import("../components/SoyRetard.vue")
   }
 
 ]
