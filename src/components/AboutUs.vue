@@ -1,5 +1,16 @@
 <template>
-  <div class="about-us">
+  <div class="about-us"
+  style="
+    border-radius: 10px;
+    padding: 22px;
+    margin: 5px;
+    position: relative;
+    left: 415px;
+    width: 42%;
+    margin-top: 50px;
+    margin-bottom: 28px;
+    box-shadow: rgba(230, 230, 230, 0.72) 10px 11px 12px 5px;
+    background: rgb(247, 247, 247);">
     <h2>Sobre Nosotras</h2>
     <p>
       Bienvenidas a TechGirls, una red social diseñada exclusivamente para chicas de 8 a 15 años que buscan apoyo, comunicación y explorar el emocionante mundo académico y tecnológico.
@@ -18,6 +29,7 @@
     <p>
       Estamos comprometidas a proporcionar recursos educativos y un espacio de apoyo donde cada chica pueda brillar y desarrollar su potencial. Únete a TechGirls y sé parte de esta increíble comunidad.
     </p>
+    <img src="../assets/Logo2.png" width="180" length="180">
     <br>
     <br>
     <h2>Un proyecto hecho por: </h2>
@@ -35,7 +47,7 @@
 }
 
 h2 {
-  color: #2c3e50;
+  color: #002430;
 }
 
 h3 {

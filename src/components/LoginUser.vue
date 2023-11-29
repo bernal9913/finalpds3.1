@@ -1,12 +1,15 @@
 <template>
   <div style="
-    border: solid 3px #2c3e50;
     border-radius: 10px;
     padding: 22px;
     margin: 5px;
     position: relative;
     left: 415px;
-    width: 38%;">
+    width: 38%;
+    margin-top: 50px;
+    margin-bottom: 28px;
+    box-shadow: rgba(230, 230, 230, 0.72) 10px 11px 12px 5px;
+    background: rgb(247, 247, 247);">
     <h2>Inicia sesión</h2>
     <form @submit.prevent="submitForm">
       <div>

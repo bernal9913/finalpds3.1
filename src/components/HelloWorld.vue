@@ -92,6 +92,12 @@ export default {
 
 .news-card {
   margin-bottom: 20px;
+  padding: 10px;
+    border-radius: 10px;
+    /* border: solid; */
+    box-shadow: 10px 11px 12px 5px #e6e6e6b8;
+    background: #f7f7f7;
+    margin: 45px;
   /* Resto de los estilos... */
 }
 /*

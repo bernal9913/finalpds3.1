@@ -1,13 +1,16 @@
 <template>
   <div
   style="
-    border: solid 3px #2c3e50;
     border-radius: 10px;
     padding: 22px;
     margin: 5px;
     position: relative;
     left: 415px;
-    width: 38%;">
+    width: 38%;
+    margin-top: 50px;
+    margin-bottom: 28px;
+    box-shadow: rgba(230, 230, 230, 0.72) 10px 11px 12px 5px;
+    background: rgb(247, 247, 247);">
     <h1>
     Lista de followers
     </h1>
@@ -27,7 +30,7 @@ export default{
           id: 4,
           name: "Kanye West",
           birthday:"8 de junio de 1977",
-          photo: "https://via.placeholder/150",
+          photo: "https://ibb.co/QNc3bHr",
           location: "Hawaii"
         },
         {

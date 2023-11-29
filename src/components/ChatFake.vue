@@ -1,13 +1,17 @@
 <template>
-    <div>
-        <button @click="openChat"
-        style="margin-top: 10px;
-        margin-left: 10px;
-        padding: 5px 10px;
-        background-color: #9f9f9f;
-        color: #fff;
-        border: none;
-        border-radius: 3px;"> <img src="../assets/ChatLogo.png"/> Abrir chat</button>
+    <div style="
+    border-radius: 10px;
+    padding: 22px;
+    margin: 5px;
+    position: relative;
+    left: 415px;
+    width: 38%;
+    margin-top: 50px;
+    margin-bottom: 28px;
+    box-shadow: rgba(230, 230, 230, 0.72) 10px 11px 12px 5px;
+    background: rgb(247, 247, 247);">
+
+        <button @click="openChat"> <img src="../assets/ChatLogo.png"/> Abrir chat</button>
 
         <div v-if="showChatModal" class="chat-modal">
             <div class="chat-window">
@@ -129,13 +133,13 @@ input {
 }
 
 button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #9f9f9f;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 </style>
   

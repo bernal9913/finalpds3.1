@@ -18,9 +18,11 @@ export default {
 
 <style scoped>
 .profile-image {
-  width: 50px; /* Ajusta el tamaño de acuerdo a tus necesidades */
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
+  width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: 19px;
 }
 </style>

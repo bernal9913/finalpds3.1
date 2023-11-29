@@ -1,12 +1,15 @@
 <template>
   <div style="
-    border: solid 3px #2c3e50;
     border-radius: 10px;
     padding: 22px;
     margin: 5px;
     position: relative;
     left: 415px;
-    width: 38%;">
+    width: 38%;
+    margin-top: 50px;
+    margin-bottom: 28px;
+    box-shadow: rgba(230, 230, 230, 0.72) 10px 11px 12px 5px;
+    background: rgb(247, 247, 247);">
     <h2>Olvidé la Contraseña</h2>
     <form @submit.prevent="submitForm">
       <div>
@@ -20,7 +23,15 @@
       <br>
 
       <div>
-        <button type="submit">Enviar Correo de Restablecimiento</button>
+        <button type="submit" 
+        style="margin-top: 10px;
+        margin-left: 10px;
+        padding: 5px 10px;
+        background-color: #9f9f9f;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;">Enviar Correo de Restablecimiento</button>
       </div>
     </form>
   </div>

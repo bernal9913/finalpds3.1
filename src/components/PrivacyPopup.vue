@@ -4,7 +4,15 @@
       <!-- Contenido del popup, como el aviso de privacidad y cookies -->
       <p>Aviso de privacidad y cookies</p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor pretium lobortis. Integer a pulvinar ligula. Vivamus blandit hendrerit turpis nec lacinia. Cras iaculis, nunc in sollicitudin fringilla, ex velit fermentum felis, varius laoreet purus.<br>
-      <button @click="closePopup">Cerrar</button>
+      <button @click="closePopup"
+      style="margin-top: 10px;
+        margin-left: 10px;
+        padding: 5px 10px;
+        background-color: #9f9f9f;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;">Cerrar</button>
     </div>
   </div>
 </template>
