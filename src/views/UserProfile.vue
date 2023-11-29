@@ -52,6 +52,13 @@ const users = [
     birthday:"20 de octubre de 1999",
     photo: "https://via.placeholder/150",
     location: "En alguna parte de corea del sur"
+  },
+  {
+    id: 32,
+    name: "Soy ese",
+    birthday: "29 de noviembre de 2023",
+    photo: "https://via.placeholder/150",
+    location: "Universidad de Sonora @ 5G-203"
   }
 ]
 export default {
