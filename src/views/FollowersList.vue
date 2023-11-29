@@ -5,7 +5,7 @@
   <div>
     <ul>
       <li v-for="amigo in amigos" :key="amigo.id">
-        <router-link to="'/usuarios/' + amigo.id">{{ amigo.name }}</router-link>
+        <router-link :to="'/usuario/' + amigo.id">{{ amigo.name }}</router-link>
       </li>
     </ul>
   </div>

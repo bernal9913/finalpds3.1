@@ -5,7 +5,7 @@
       <h2>{{ user.name }}</h2>
     </div>
     <div>
-      <p><strong>Fecha de cumpleaños:: </strong> {{ user.birthday }}</p>
+      <p><strong>Fecha de cumpleaños: </strong> {{ user.birthday }}</p>
     </div>
   </div>
 </template>
