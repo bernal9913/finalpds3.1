@@ -65,7 +65,7 @@ const routes = [
     component: () => import("../components/UserRegister.vue")
   },
   {
-    path: "/olvidar-contraseña",
+    path: "/olvidar-contrasena",
     name: "Olvidaste la contraseña?",
     component: ()=> import("../components/SoyRetard.vue")
   }
