@@ -44,13 +44,15 @@ const routes = [
   },
   {
     path: "/amigos",
-    name: "amigos",
     component: () => import('../views/FriendList.vue')
   },
   {
     path: "/followers",
-    name: "followers",
-    component: () => import("../views/Followers")
+    component: () => import("../views/FollowersList.vue")
+  },
+  {
+    path: "/ajustes",
+    component: () => import("../components/PrivacySettings.vue")
   }
 
 ]

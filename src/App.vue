@@ -11,6 +11,7 @@
     <router-link to="/Chat">Chat</router-link> |
     <router-link to="/amigos">Amigos</router-link>
     <router-link to="/followers">Seguidores</router-link>
+    <router-link to="/ajustes">Ajustes</router-link>
   </nav>
   <router-view/>
   <div>
