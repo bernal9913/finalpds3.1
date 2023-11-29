@@ -7,7 +7,7 @@
     position: relative;
     left: 415px;
     width: 38%;">
-        <h2>Lista de entradas</h2>
+        <h2>Lista de entradas en espera de aprobación</h2>
         <ul>
             <li v-for="entrada in entradas" :key="entrada.id">
             <router-link :to="'/entrada/' + entrada.id">{{ entrada.titulo }}</router-link>
