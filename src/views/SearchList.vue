@@ -3,16 +3,18 @@
 <template>
   <div>
     <img alt="Vue logo" src="../assets/Logo2.png" width="150" length="150" style="position: absolute;left: 9px;top: -15px;">
-    <input v-model="searchTerm" placeholder="Buscar..." @input="filterList" 
-    style="
+    <input v-model="searchTerm" placeholder="Buscar..." @input="filterList"
+           style="
         border: none;
         border-radius: 5px;
         box-shadow: 0px 2px 5px #a2a2a2;
         width: 400px;"/>
     <ul v-if="searchTerm">
-      <li v-for="item in filteredList" :key="item.id">{{ item.text }}</li>
+      <li v-for="user in filteredList" :key="user.id">
+        <router-link :to="'/usuario/' + user.id">{{ user.name }}</router-link>
+      </li>
     </ul>
-    <p v-else>No hay término de búsqueda.</p>
+    <p v-else></p>
   </div>
 </template>
 
@@ -21,19 +23,57 @@ export default {
   data() {
     return {
       searchTerm: "",
-      dummyData: [
-        { id: 1, text: "Lorem Ipsum 1" },
-        { id: 2, text: "Lorem Ipsum 2" },
-        { id: 3, text: "Lorem Ipsum 3" },
-        // Agrega más entradas según sea necesario
+      users: [
+        {
+          id: 1,
+          name: "Vilma Dinkley",
+          birthday:"01 de enero de 1990",
+          photo: "https://via.placeholder/150",
+          location: "Ciudad de Mexico"
+        },
+        {
+          id: 2,
+          name: "Rei Ayanami",
+          birthday:"30 de marzo de 1996",
+          photo: "https://via.placeholder/150",
+          location: "Sinaloa"
+        },
+        {
+          id: 3,
+          name: "Mai Sakurajima",
+          birthday:"2 de diciembre de 1999",
+          photo: "https://via.placeholder/150",
+          location: "Monterrey"
+        },
+        {
+          id: 4,
+          name: "Kanye West",
+          birthday:"8 de junio de 1977",
+          photo: "https://via.placeholder/150",
+          location: "Hawaii"
+        },
+        {
+          id: 5,
+          name: "jungkook",
+          birthday:"1 de septiembre de 1997",
+          photo: "https://via.placeholder/150",
+          location: "En alguna parte de corea del sur"
+        },
+        {
+          id: 6,
+          name: "Chuu",
+          birthday:"20 de octubre de 1999",
+          photo: "https://via.placeholder/150",
+          location: "En alguna parte de corea del sur"
+        }
       ],
     };
   },
   computed: {
     filteredList() {
       const lowerCaseSearchTerm = this.searchTerm.toLowerCase();
-      return this.dummyData.filter((item) =>
-          item.text.toLowerCase().includes(lowerCaseSearchTerm)
+      return this.users.filter((user) =>
+          user.name.toLowerCase().includes(lowerCaseSearchTerm)
       );
     },
   },
