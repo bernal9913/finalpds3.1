@@ -8,8 +8,22 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/about',
+    name: 'about us',
+    component: ()=> import('../components/AboutUs.vue')
+  },
+  {
     path: '/ContactCard',
     component: () => import('../components/ContactCard.vue')
+  },
+  {
+    path: '/mi-perfil',
+    component: () => import('../components/MyProfile.vue')
+  },
+  {
+    path: '/editable-profile',
+    name: 'editable-profile',
+    component: () => import('../components/EditableProfile.vue')
   },
   {
     path: '/Chat',
@@ -21,12 +35,12 @@ const routes = [
   },
   {
     path: '/entradas',
-    component: () => import('../components/ListaEntradas.vue')
+    component: () => import('../views/ListaEntradas.vue')
   },
   {
     path: '/entrada/:id',
     name: 'entrada-detalle',
-    component: () => import('../components/EntradaDetalle.vue')
+    component: () => import('../views/EntradaDetalle.vue')
   },
   {
     path: '/usuario/:id',
