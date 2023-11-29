@@ -2,7 +2,14 @@
   <h1>
     Lista de amigos
   </h1>
-  <div>
+  <div style="
+    border: solid 3px #2c3e50;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 5px;
+    position: relative;
+    left: 415px;
+    width: 38%;">
     <ul>
       <li v-for="amigo in amigos" :key="amigo.id">
         <router-link :to="'/usuario/' + amigo.id">{{ amigo.name }}</router-link>

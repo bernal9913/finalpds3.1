@@ -1,5 +1,12 @@
 <template>
-    <div>
+    <div style="
+    border: solid 3px #2c3e50;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 5px;
+    position: relative;
+    left: 415px;
+    width: 38%;">
         <h2>Lista de entradas</h2>
         <ul>
             <li v-for="entrada in entradas" :key="entrada.id">

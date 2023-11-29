@@ -1,6 +1,14 @@
 <template>
     <div>
-        <button @click="openChat">Open Chat</button>
+        <button @click="openChat"
+        style="margin-top: 10px;
+        margin-left: 10px;
+        padding: 5px 10px;
+        background-color: #9f9f9f;
+        color: #fff;
+        border: none;
+        border-radius: 3px;"> <img src="../assets/ChatLogo.png"/> Abrir chat</button>
+
         <div v-if="showChatModal" class="chat-modal">
             <div class="chat-window">
                 <div class="chat-messages">

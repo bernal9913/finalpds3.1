@@ -8,17 +8,8 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  },
-  {
     path: '/ContactCard',
     component: () => import('../components/ContactCard.vue')
-  },
-  {
-    path: '/HomePublicaciones',
-    component: () => import('../components/HomePublicaciones.vue')
   },
   {
     path: '/Chat',

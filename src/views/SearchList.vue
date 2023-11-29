@@ -2,7 +2,13 @@
 
 <template>
   <div>
-    <input v-model="searchTerm" placeholder="Buscar..." @input="filterList" />
+    <img alt="Vue logo" src="../assets/Logo2.png" width="150" length="150" style="position: absolute;left: 9px;top: -15px;">
+    <input v-model="searchTerm" placeholder="Buscar..." @input="filterList" 
+    style="
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px #a2a2a2;
+        width: 400px;"/>
     <ul v-if="searchTerm">
       <li v-for="item in filteredList" :key="item.id">{{ item.text }}</li>
     </ul>

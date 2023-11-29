@@ -1,8 +1,16 @@
 <template>
-  <h1>
+  <div
+  style="
+    border: solid 3px #2c3e50;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 5px;
+    position: relative;
+    left: 415px;
+    width: 38%;">
+    <h1>
     Lista de followers
-  </h1>
-  <div>
+    </h1>
     <ul>
       <li v-for="amigo in amigos" :key="amigo.id">
         <router-link :to="'/usuario/' + amigo.id">{{ amigo.name }}</router-link>

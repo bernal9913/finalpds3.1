@@ -3,8 +3,6 @@
     <SearchList/>
     <search-list/>
     <router-link to="/">Home</router-link> |
-    <router-link to="/HomePublicaciones">Noticias</router-link> |
-    <router-link to="/about">About</router-link> |
     <router-link to="/ContactCard">Contact Card Test</router-link> |
     <router-link to="/NuevaEntrada">Nueva publicación</router-link> |
     <router-link to="/entradas">Publicaciónes</router-link> |

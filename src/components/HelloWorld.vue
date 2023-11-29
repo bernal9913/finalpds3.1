@@ -1,58 +1,141 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="news-grid">
+    <div v-for="news in newsList" :key="news.id" class="news-card">
+      <h2>{{ news.title }}</h2>
+      <img :src="news.image" alt="News Image" class="news-image">
+      <p>{{ news.content }}</p>
+      <div class="comment-bar">
+        <input type="text" v-model="commentInput" placeholder="Añadir comentario...">
+        <button @click="addComment(news.id)">Comentar</button>
+      </div>
+      <div class="comments">
+        <div v-for="comment in news.comments" :key="comment.id" class="comment">
+          <p>{{ comment.text }}</p>
+        </div>
+      </div>
+      <button @click="likeNews(news.id)">
+        {{ news.likes }} Likes ❤️
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  data() {
+    return {
+      newsList: [
+        {
+          id: 1,
+          title: "Gobierno de Sonora",
+          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor pretium lobortis. Integer a pulvinar ligula. Vivamus blandit hendrerit turpis nec lacinia. Cras iaculis, nunc in sollicitudin fringilla, ex velit fermentum felis, varius laoreet purus.",
+          image: require("../assets/Noticia1.jpg"),
+          comments: [],
+          likes: 0
+        },
+        {
+          id: 2,
+          title: "Chat GPT",
+          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor pretium lobortis. Integer a pulvinar ligula. Vivamus blandit hendrerit turpis nec lacinia. Cras iaculis, nunc in sollicitudin fringilla, ex velit fermentum felis, varius laoreet purus.",
+          image: require("../assets/Noticia2.jpg"),
+          comments: [],
+          likes: 0
+        },
+        {
+          id: 3,
+          title: "Conferencia",
+          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor pretium lobortis. Integer a pulvinar ligula. Vivamus blandit hendrerit turpis nec lacinia. Cras iaculis, nunc in sollicitudin fringilla, ex velit fermentum felis, varius laoreet purus.",
+          image: require("../assets/Noticia3.jpg"),
+          comments: [],
+          likes: 0
+        },
+        {
+          id: 4,
+          title: "Bard",
+          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor pretium lobortis. Integer a pulvinar ligula. Vivamus blandit hendrerit turpis nec lacinia. Cras iaculis, nunc in sollicitudin fringilla, ex velit fermentum felis, varius laoreet purus.",
+          image: require("../assets/Noticia4.jpg"),
+          comments: [],
+          likes: 0
+        }
+      ],
+      commentInput: ""
+    };
+  },
+  methods: {
+    addComment(newsId) {
+      const news = this.newsList.find(news => news.id === newsId);
+      if (news) {
+        news.comments.push({ id: Date.now(), text: this.commentInput });
+        this.commentInput = "";
+      }
+    },
+    likeNews(newsId) {
+      const news = this.newsList.find(news => news.id === newsId);
+      if (news) {
+        news.likes++;
+      }
+    }
   }
-}
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.news-card {
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 11px 12px 5px #e6e6e6b8;
+    background: #f7f7f7;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+.comment-bar {
+  margin-top: 10px;
 }
-a {
-  color: #42b983;
+
+.comment-bar input {
+    width: 80%;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.comments {
+  margin-top: 10px;
+}
+
+.comment {
+  border-bottom: solid #e2e2e2;
+  padding: 0px;
+  margin-bottom: 5px;
+  position: relative;
+  /* border-radius: 5px; */
+  width: 65%;
+  left: 19%;
+}
+
+button {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #9f9f9f;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  /* border: #f00; */
+}
+
+.news-image {
+  width: 400px;
+  height: auto;
+  margin-bottom: 50px;
+  border-radius: 8px;
 }
 </style>

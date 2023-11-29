@@ -1,5 +1,13 @@
 <template>
-  <div class="privacy-toggles">
+  <div class="privacy-toggles" style="
+    border: solid 3px #2c3e50;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 5px;
+    position: relative;
+    left: 415px;
+    width: 38%;">
+    
     <div class="toggle">
       <span class="label">Perfil público</span>
       <label class="switch">
@@ -31,13 +39,14 @@ export default {
 <style>
 
 button {
-margin-top: 10px;
-padding: 8px 16px;
-background-color: #007bff;
-color: #fff;
-border: none;
-border-radius: 4px;
-cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #9f9f9f;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 button:hover {
